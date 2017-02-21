@@ -1,20 +1,224 @@
-<!DOCTYPE HTML>
 <html>
-  <head>
-    <title> Notman SS Dashboard </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/williamnotman.jpg" class="img-responsive">
-        </div>
-        <div class="col-md-6">
-          <img src="images/arrow.gif" class="img-responsive">
-        </div>
-      </div>
-    </div>
-  </body>
+
+<head>
+   <title>Location:</title>
+   
+   <!--
+   https://fonts.google.com/specimen/Poiret+One?selection.family=News+Cycle|Poiret+One
+   -->
+   
+   <link href="https://fonts.googleapis.com/css?family=News+Cycle|Open+Sans|Poiret+One" rel="stylesheet">
+   
+   <style type="text/css">
+       body {
+           width: 1920px;
+           height: 1080px;
+           background-image: url(./images/background.png);
+           font-family: 'Poiret One', 'Helvetica-Light', sans-serif;
+           position: relative;
+       }
+       
+       .notmanlogo {
+           padding: 20px;
+       }
+       
+       .date, .time {
+           color: white;
+           font-size: 50px;
+           margin-top: 20px;
+           font-weight: bold;
+           padding-left: 30px; 
+           font-family: "Open Sans";        
+       }
+       
+       
+       .rooms {
+         color: white;
+           position: absolute;
+           top: 0px;
+           bottom: 0px;
+           right: 0px;
+           width: 476px;
+           background-color: rgba(0,0,0,0.45);
+           display:table-cell;  
+           vertical-align: middle; 
+           height: 1080px;           
+       }
+       
+       .rooms ul {
+           margin-top: 300px;
+       }
+       
+       .rooms li {
+           display: block;
+           font-size: 35pt;
+		   margin-top:20px;
+		   margin-bottom:20px;		             
+		   font-family: 'Poiret One', 'News Cycle';
+       }
+       
+       #alloffices {
+          color: #ccc;
+       }
+       
+       .alloffices::before {
+          content: '';
+       }  
+              
+       #bigroom {
+          color: #C412C2;
+       }
+       
+       .bigroom::before {
+          content: '';
+       }       
+       
+       #glassdoorroom {
+          color: #70BF41;
+       }
+       
+       .glassdoorroom::before {
+          content: '';
+       }
+              
+       #osmocafe {
+          color: #C82506;
+       }
+       
+       .osmocafe::before {
+          content: '';
+       }
+              
+       #washroom {
+          color: #51A7F9;
+       }
+       
+       .toilet::before {
+          content: '';
+       }
+       
+       #houseplan {
+           position: absolute;           
+           top: 400px;
+           left: 250px;
+       
+       }
+       
+       .rooms  li{
+           white-space: nowrap;
+           overflow-x: hidden;
+       }
+       
+       #communitybuilt {
+            position: absolute;
+            font-family: 'Open Sans';
+            color: white;
+            bottom: 0;
+            left: 0;
+            font-size: 27px;
+       }
+       
+       #qrcode img {
+            position: absolute;
+            bottom: 40px;
+            left: 5px;  
+            width: 100px;     
+       }
+                                   
+   </style>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+          integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+          crossorigin="anonymous"></script>
+          
+   <script type="text/javascript">
+       var languages = ['en', 'fr'];
+       var langIdx = 0;
+       
+       var strings = {
+           en: {
+              alloffices: '⬆ all offices',
+              bigroom: '⬆ big room',
+              glassdoorroom: '⬆ glass door room',
+              washroom: '&nbsp;⬌&nbsp;washrooms', 
+              osmocafe: '⬇ osmo café',                        
+           },
+           fr: {
+              alloffices: '⬆ bureaux',
+              bigroom: '⬆ la grande salle',
+              glassdoorroom: '⬆ <span style="font-size: 75%"> la salle à la porte vitré</span>',
+              washroom: '&nbsp;⬌&nbsp;toilettes', 
+              osmocafe: '⬇ café osmo',                        
+           }           
+       }
+       
+       function updateDate () {           
+           $('.date').html(moment().format('DD MMMM YYYY'));
+       }
+       
+       function updateTime () {
+           $('.time').html(moment().format('HH:mm'));
+       }
+       
+       
+       function switchLocale() {
+           langIdx++;
+           if (langIdx >= languages.length) {
+               langIdx = 0;
+           }
+           moment.locale(languages[langIdx]);
+           
+           var lang = languages[langIdx];
+           
+           updateDate();
+           
+           $('#alloffices').html(strings[lang]['alloffices']);
+           $('#bigroom').html(strings[lang]['bigroom']);
+           $('#glassdoorroom').html(strings[lang]['glassdoorroom']);
+           $('#toilets').html(strings[lang]['toilets']);
+           $('#osmocafe').html(strings[lang]['osmocafe']);
+           
+           $("#houseplan img").attr('src', './images/notman-cross-section-white-' + lang + '.svg');
+
+       }
+       
+       $(document).ready(function () {
+
+           setInterval(updateTime, 1000);
+           setInterval(updateDate, 1000);
+           setInterval(switchLocale, 5000);
+       });
+   
+   </script>
+   
+</head>
+
+<body>
+
+<div class="notmanlogo" ><img src="images/Logo_Maison_Notman_House-white.png"/></div>
+<div class="date" >dd MMMMM YYYY</div>
+<div class="time" >HH:mm</div>
+
+<div id="houseplan"><img src="images/notman-cross-section-white-en.svg"/></div>
+
+<div class="rooms">
+<ul>
+  <li id="alloffices">⬆ all offices</li>
+  <li id="bigroom">⬆ big room</li>  
+  <li id="glassdoorroom">⬆ glass door room</li>  
+  <li id="washroom">&nbsp;⬌&nbsp;washroom</li>
+  <li id="osmocafe">⬇ osmo cafe</li>    
+        
+</ul>
+</div>
+
+<div id="qrcode">
+<img src="images/qr-code.svg"/>
+</div>>
+<div id="communitybuilt">
+Community built. Improve me: http://github.com/maison-notman-house
+</div>
+
+</body>
 </html>

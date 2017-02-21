@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="-178 269 830 302" width="830pt" height="302pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata> Produced by OmniGraffle 7.2.2 
+    <dc:date>2017-02-21 16:22:14 +0000</dc:date>
+  </metadata>
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="24" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="500">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" viewBox="-1 -3 6 6" markerWidth="6" markerHeight="6" color="white">
+      <g>
+        <path d="M 3.7333333 0 L 0 -1.4 L 0 1.4 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <g>
+      <title>Layer 1</title>
+      <rect x="394.5652" y="357.118" width="237.91925" height="49.62733" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <rect x="156.64596" y="456.37267" width="475.8385" height="49.62733" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <rect x="-81.27329" y="456.37267" width="237.91925" height="49.62733" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <rect x="-81.27329" y="406.74534" width="713.7578" height="49.62733" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <rect x="-81.27329" y="357.118" width="237.91925" height="49.62733" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <rect x="394.5652" y="307.4907" width="237.91925" height="49.62733" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path d="M 377.0497 307.4907 L 513.52484 271 L 650 307.4907 Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path d="M -98.78882 357.118 L 37.686335 320.62733 L 174.1615 357.118 Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path d="M 540.52795 503.08075 L 540.52795 487.02484 L 556.58385 487.02484 L 556.58385 469.5093 L 574.0994 469.5093 L 574.0994 454.91304" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path d="M 540.52795 454.91304 L 540.52795 438.85714 L 556.58385 438.85714 L 556.58385 421.3416 L 574.0994 421.3416 L 574.0994 406.74534" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path d="M 540.52795 406.74534 L 540.52795 390.68944 L 556.58385 390.68944 L 556.58385 373.1739 L 574.0994 373.1739 L 574.0994 358.57764" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path d="M 69.06832 454.91304 L 69.06832 438.85714 L 85.12422 438.85714 L 85.12422 421.3416 L 102.63975 421.3416 L 102.63975 406.74534" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle cx="423.02795" cy="332.30435" r="16.785741" fill="#51a7f9"/>
+      <circle cx="423.02795" cy="332.30435" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="468.2764" cy="332.30435" r="16.785741" fill="#c412c2"/>
+      <circle cx="468.2764" cy="332.30435" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="513.52484" cy="332.30435" r="16.785741" fill="#00fa00"/>
+      <circle cx="513.52484" cy="332.30435" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="423.02795" cy="382.6615" r="16.785741" fill="#51a7f9"/>
+      <circle cx="423.02795" cy="382.6615" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="468.2764" cy="382.6615" r="16.785741" fill="#e6e6e6"/>
+      <circle cx="468.2764" cy="382.6615" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="423.02795" cy="431.559" r="16.785741" fill="#51a7f9"/>
+      <circle cx="423.02795" cy="431.559" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="468.2764" cy="431.559" r="16.785741" fill="#e6e6e6"/>
+      <circle cx="468.2764" cy="431.559" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="423.02795" cy="480.4565" r="16.785741" fill="#51a7f9"/>
+      <circle cx="423.02795" cy="480.4565" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="281.4441" cy="480.4565" r="16.785741" fill="#c82506"/>
+      <circle cx="281.4441" cy="480.4565" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="-51.35093" cy="382.6615" r="16.785741" fill="#ccc"/>
+      <circle cx="-51.35093" cy="382.6615" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="-6.1024845" cy="382.6615" r="16.785741" fill="#51a7f9"/>
+      <circle cx="-6.1024845" cy="382.6615" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <circle cx="-51.35093" cy="430.8292" r="16.785741" fill="#ccc"/>
+      <circle cx="-51.35093" cy="430.8292" r="16.785741" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(-120.336 504.5) rotate(-90)" fill="white">
+        <tspan font-family="Helvetica Neue" font-size="24" font-weight="500" fill="white" x="6.544" y="23" textLength="68.448">sherbr</tspan>
+        <tspan font-family="Helvetica Neue" font-size="24" font-weight="500" fill="white" x="74.56" y="23" textLength="52.896">ooke</tspan>
+      </text>
+      <text transform="translate(335 537.164)" fill="white">
+        <tspan font-family="Helvetica Neue" font-size="24" font-weight="500" fill="white" x=".76" y="23" textLength="66.672">you ar</tspan>
+        <tspan font-family="Helvetica Neue" font-size="24" font-weight="500" fill="white" x="67" y="23" textLength="53.784">e her</tspan>
+        <tspan font-family="Helvetica Neue" font-size="24" font-weight="500" fill="white" x="120.352" y="23" textLength="12.888">e</tspan>
+      </text>
+      <line x1="397" y1="532" x2="397" y2="508.9" marker-end="url(#FilledArrow_Marker)" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
