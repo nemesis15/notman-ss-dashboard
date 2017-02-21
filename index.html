@@ -10,6 +10,13 @@
    <link href="https://fonts.googleapis.com/css?family=News+Cycle|Open+Sans|Poiret+One" rel="stylesheet">
    
    <style type="text/css">
+       html {
+           width: 1920px;
+           height: 1080px; 
+           border: solid 1px yellow;
+           overflow: hidden;
+       }
+       
        body {
            width: 1920px;
            height: 1080px;
@@ -39,7 +46,7 @@
            bottom: 0px;
            right: 0px;
            width: 476px;
-           background-color: rgba(0,0,0,0.45);
+           background-color: rgba(0,0,0,0.6);
            display:table-cell;  
            vertical-align: middle; 
            height: 1080px;           
@@ -55,6 +62,9 @@
 		   margin-top:20px;
 		   margin-bottom:20px;		             
 		   font-family: 'Poiret One', 'News Cycle';
+           white-space: nowrap;
+           overflow-x: hidden;		
+           font-weight: bold;   
        }
        
        #alloffices {
@@ -103,26 +113,22 @@
            left: 250px;
        
        }
-       
-       .rooms  li{
-           white-space: nowrap;
-           overflow-x: hidden;
-       }
+    
        
        #communitybuilt {
             position: absolute;
             font-family: 'Open Sans';
             color: white;
-            bottom: 0;
+            bottom: 15px;
             left: 0;
             font-size: 27px;
        }
        
        #qrcode img {
             position: absolute;
-            bottom: 40px;
+            bottom: 60px;
             left: 5px;  
-            width: 100px;     
+            width: 110px;     
        }
                                    
    </style>
