@@ -7,7 +7,10 @@
    https://fonts.google.com/specimen/Poiret+One?selection.family=News+Cycle|Poiret+One
    -->
    
-   <link href="https://fonts.googleapis.com/css?family=News+Cycle|Open+Sans|Poiret+One" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=News+Cycle|Open+Sans|Poiret+One|Alegreya+Sans:800|Roboto:700" rel="stylesheet">
+   
+   <meta http-equiv="Pragma" content="no-cache" />
+   <meta charset="UTF-8" />
    
    <style type="text/css">
        html {
@@ -17,120 +20,176 @@
            overflow: hidden;
        }
        
+
        body {
            width: 1920px;
            height: 1080px;
-           background-image: url(./images/background.jpg);
-           font-family: 'Poiret One', 'Helvetica-Light', sans-serif;
+           background: white;
+           font-family: 'Open Sans', 'Helvetica-Light', sans-serif;
            position: relative;
        }
-       
-       .notmanlogo {
-           padding: 20px;
+ 
+       header .notmanlogo {
+            width: 1000px;       
        }
        
-       .date, .time {
-           color: white;
-           font-size: 50px;
-           margin-top: 20px;
-           font-weight: bold;
-           padding-left: 30px; 
-           font-family: "Open Sans";        
+       .events {
+            width: 1600px;
+            margin: 0 auto;     
        }
        
-       
-       .rooms {
-         color: white;
-           position: absolute;
-           top: 0px;
-           bottom: 0px;
-           right: 0px;
-           width: 476px;
-           background-color: rgba(0,0,0,0.6);
-           display:table-cell;  
-           vertical-align: middle; 
-           height: 1080px;           
+       .events h1 { 
+            font-size: 70px;
+       }
+
+       .events li {
+		    display: block;
+		    margin-bottom: 30px;
+		    vertical-align: middle;
+	   }
+	   	
+       .events li .roomlabel {
+			vertical-align: top;
+			margin: 10px 20px 0 0;
+			padding: 5px 0;
+			font-size: 40px;
+			font-weight: 400;
+			border-radius: 10px;
+			color: black;
+			background-color: #ddd;
+			white-space: nowrap;
+			display: inline-block;
+			width: 300px;
+			text-align: center;
+			text-transform: uppercase;
+			
+			
        }
        
-       .rooms ul {
-           margin-top: 300px;
+       .events li.bigroom .roomlabel{
+           background: purple;      
+           color: white;            
        }
        
-       .rooms li {
-           display: block;
-           font-size: 35pt;
-		   margin-top:20px;
-		   margin-bottom:20px;		             
-		   font-family: 'Poiret One', 'News Cycle';
-           white-space: nowrap;
-           overflow-x: hidden;		
-           font-weight: bold;   
+       .events li.glassdoorroom .roomlabel {
+           background: #009688;    
+           color: white;   
        }
        
-       #alloffices {
-          color: #ccc;
+       .events li.osmocafe .roomlabel {
+           background: #da7a21;  
+           color: white;                
+       }
+                     
+       .events li .details {
+            display: inline-block;  
+            width: 1200px;
+            text-overflow: ellipsis;
+                       
        }
        
-       .alloffices::before {
-          content: '';
-       }  
-              
-       #bigroom {
-          color: #C412C2;
-       }
-       
-       .bigroom::before {
-          content: '';
-       }       
-       
-       #glassdoorroom {
-          color: #70BF41;
-       }
-       
-       .glassdoorroom::before {
-          content: '';
-       }
-              
-       #osmocafe {
-          color: #C82506;
-       }
-       
-       .osmocafe::before {
-          content: '';
+       .events li .eventtime {
+            font-family: 'Roboto';       
+            font-weight: bold;
+            font-size: 70px;
+            vertical-align: top;
+            display: inline-block;
        }
               
-       #washroom {
-          color: #51A7F9;
+       .events li .eventtitle {
+            font-family: 'Roboto';
+			font-weight: bold;
+			font-size: 70px;
+			text-overflow: ellipsis;
+			display: inline-block;
+			width: 900px;
+			overflow: hidden;
+			white-space: nowrap;
+			vertical-align: top;
        }
        
-       .toilet::before {
-          content: '';
+       .events li .eventtitle::before {
+            content: ' - ';
        }
        
-       #houseplan {
-           position: absolute;           
-           top: 400px;
-           left: 250px;
+	   .events li .eventtitle:before, .events li .eventtitle:after {
+			box-sizing: inherit;
+	   }       
+	   
+       .events li .roomdirections {
+            display: block;  
+            font-size: 40px;  
+            font-family: 'Open Sans';               
+       }   
        
-       }
-    
-       
-       #communitybuilt {
+       #communitybuilt  {
             position: absolute;
-            font-family: 'Open Sans';
-            color: white;
-            bottom: 15px;
-            left: 0;
-            font-size: 27px;
+            left: 30px;
+            bottom: 30px;
+            font-size: 30px;
        }
        
-       #qrcode img {
+       #allrooms {
             position: absolute;
-            bottom: 60px;
-            left: 5px;  
-            width: 110px;     
+            right: 20px;
+            bottom: 30px; 
+            font-size: 30px;
        }
-                                   
+       
+       #allrooms ul {
+            float: left;
+            margin: 60px 40px 0 40px;
+       }
+       
+       #allrooms ul li {
+       		display: block; 
+       		color: #5a3c59;      
+       }
+       
+       #allrooms img {
+            width: 200px;
+       }
+       
+       
+       .time {
+			position: absolute;
+			top: 30px;
+			font-size: 70px;
+			right: 60px;
+			width: 400px;
+			text-align: right;
+       }
+              
+       .date {
+			position: absolute;
+			top: 120px;
+			font-size: 40px;
+			right: 60px;
+			width: 400px;
+			text-align: right;
+       }
+
+       @keyframes blink {
+			0% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+		
+		#allrooms img {
+			animation: blink 2s;
+			animation-iteration-count: infinite;
+		}		
+       
+        .noevents {
+			font-size: 50px;
+			padding-left: 80px;            
+        }
    </style>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
@@ -142,21 +201,67 @@
        var languages = ['en', 'fr'];
        var langIdx = 0;
        
+       
+       var roomToKey = {
+          'glass door room': 'glassdoorroom',
+          'glass door': 'glassdoor',
+          'glassdoor': 'glassdoor',
+          'bigroom': 'bigroom',
+          'big room': 'bigroom',
+          'osmocafe': 'osmocafe',                
+          'osmo cafe': 'osmocafe',
+          'cafe': 'osmocafe',                                    
+       };
+       
        var strings = {
            en: {
-              alloffices: '⬆ all offices',
-              bigroom: '⬆ big room',
-              glassdoorroom: '⬆ glass door room',
-              washroom: '&nbsp;⬌&nbsp;washrooms', 
-              osmocafe: '⬇ osmo café',                        
+              "room-alloffices": 'all offices',
+              "room-bigroom": 'big room',
+              "room-glassdoorroom": 'glass door',
+              "room-washroom": 'washrooms', 
+              "room-osmocafe": 'osmo café', 
+              "events-heading": "Events on Today",
+              
+              "room-alloffices-long": 'all offices',
+              "room-bigroom-long": 'big room',
+              "room-glassdoorroom-long": 'glass door room',
+              "room-washroom-long": 'washrooms', 
+              "room-osmocafe-long": 'osmo café', 
+                            
+              "directions-bigroom": "3rd floor, go up stairs through door way to the right.",
+              "directions-glassdoorroom": "3rd floor, go up stairs through door way to the right.",
+              "directions-osmocafe": "This floor, behind you.",
+              
+              "noevents": "No events today"                                 
            },
            fr: {
-              alloffices: '⬆ bureaux',
-              bigroom: '⬆ la grande salle',
-              glassdoorroom: '⬆ <span style="font-size: 75%"> la salle à la porte vitré</span>',
-              washroom: '&nbsp;⬌&nbsp;toilettes', 
-              osmocafe: '⬇ café osmo',                        
+              "room-alloffices": 'bureaux',
+              "room-bigroom": 'grande salle',
+              "room-glassdoorroom": 'porte vitré',
+              "room-washroom": 'toilettes', 
+              "room-osmocafe": 'café osmo',      
+
+
+              "room-alloffices-long": 'bureaux',
+              "room-bigroom-long": 'la grande salle',
+              "room-glassdoorroom-long": 'la salle à la porte vitré',
+              "room-washroom-long": 'toilettes', 
+              "room-osmocafe-long": 'café osmo',  
+              
+              "events-heading": 'Evénements aujourd\'hui',
+              
+              "directions-bigroom": "Au 3ieme étage, par la porte à droite.",
+              "directions-glassdoorroom": "Au 3ieme étage, par la porte à droite.",
+              "directions-osmocafe": "Derrière vous, à cet étage",
+              
+              "noevents": "Aucun événements aujourd\'hui"                                                    
            }           
+       }
+       
+       function getText(key) {
+           var lang = languages[langIdx];
+           
+           return strings[lang][key];
        }
        
        function updateDate () {           
@@ -179,49 +284,145 @@
            
            updateDate();
            
-           $('#alloffices').html(strings[lang]['alloffices']);
-           $('#bigroom').html(strings[lang]['bigroom']);
-           $('#glassdoorroom').html(strings[lang]['glassdoorroom']);
-           $('#toilets').html(strings[lang]['toilets']);
-           $('#osmocafe').html(strings[lang]['osmocafe']);
+           $('.alloffices .roomlabel').html(getText('room-alloffices'));
+           $('.bigroom .roomlabel').html(getText('room-bigroom'));
+           $('.glassdoorroom .roomlabel').html(getText('room-glassdoorroom'));
+           $('.toilets .roomlabel').html(getText('room-toilets'));
+           $('.osmocafe .roomlabel').html(getText('room-osmocafe'));
            
-           $("#houseplan img").attr('src', './images/notman-cross-section-white-' + lang + '.svg');
+           $('.events h1').html(strings[lang]['events-heading']);
+           
+           $('.alloffices .roomdirections').html(getText('directions-alloffices'));
+           $('.bigroom .roomdirections').html(getText('directions-bigroom'));
+           $('.glassdoorroom .roomdirections').html(getText('directions-glassdoorroom'));
+           $('.toilets .roomdirections').html(getText('directions-toilets'));
+           $('.osmocafe .roomdirections').html(getText('directions-osmocafe'));
 
+           $('#allrooms .alloffices').html(getText('room-alloffices-long')); 
+           $('#allrooms .bigroom').html(getText('room-bigroom-long'));                      
+           $('#allrooms .glassdoorroom').html(getText('room-glassdoorroom-long'));                                 
+           
+           $('.noevents').html(getText('noevents')); 
+       }
+       
+       
+       function toISODate(date) {
+           return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+       }
+       
+       function normalizeRoomName(room) {
+           
+       }
+       
+       function renderEvent(event) {
+           var roomClass = '';
+           var roomName  = event.room ;
+           var roomdirections = '';
+           
+           var roomRef = event.room;
+           if (roomToKey[roomRef]) {
+              roomRef = roomToKey[roomRef];
+           }           
+           
+           var html = '<li class="' + roomRef + '">';
+           html += '<div class="roomlabel"> ' + getText('room-' + roomRef) + '</div>';
+           html += '<div class="details">';
+           html += '<span class="eventtime">' + event.start + '</span><span class="eventtitle">' + event.title + '</span>';
+           html += '<span class="roomdirections">' + getText('directions-' + roomRef) + '</span>';       
+           html += '</li>';
+           return html;
+       }
+       
+       function renderEvents(events) {
+           //var isoDate = toISODate(new Date());
+           $('.events ul').html('');
+           
+           var html = '';
+           var foundEvents = false;
+           if (events) {               
+               events.forEach(function (day) {
+                   var i;
+                   var items;
+                   console.log('day: ', day.day, day.items.length);
+                   if (day.day === 'Today') {
+                       items = day.items;
+                       for (i=0; i < items.length; i++) {                           
+                           html += renderEvent(items[i]);                       
+                       }
+                   }
+               });
+           }
+           
+           foundEvents = false
+           
+           if (!foundEvents) {
+              html = '<p class="noevents">No Events today</p>';
+           }
+           
+           $('.events ul').html(html);
+           
+           
+           if (!foundEvents) {
+           
+           }
+       }
+       
+       function updateEvents() {
+           fetch('https://notman.herokuapp.com/api/events?24hour=1').then(function (response) {
+			  var contentType = response.headers.get("content-type");
+			  if(contentType && contentType.indexOf("application/json") !== -1) {
+				return response.json().then(function(json) {
+				  renderEvents(json);
+				});
+			  } else {
+				console.log("Oops, we haven't got JSON!");
+			  }
+           });
+       
        }
        
        $(document).ready(function () {
-
+           updateEvents();
+           
            setInterval(updateTime, 1000);
            setInterval(updateDate, 1000);
            setInterval(switchLocale, 5000);
+           setInterval(updateEvents, 60000);
        });
    
+       
    </script>
    
 </head>
 
 <body>
 
-<div class="notmanlogo" ><img src="images/Logo_Maison_Notman_House-white.png"/></div>
+<header>
+<img class="notmanlogo" src="images/Logo_Maison_Notman_House.svg"/></div>
+</header>
+
 <div class="date" >dd MMMMM YYYY</div>
 <div class="time" >HH:mm</div>
 
-<div id="houseplan"><img src="images/notman-cross-section-white-en.svg"/></div>
+<div class="events">
+<h1>Events on Now</h1>
 
-<div class="rooms">
+
 <ul>
-  <li id="alloffices">⬆ all offices</li>
-  <li id="bigroom">⬆ big room</li>  
-  <li id="glassdoorroom">⬆ glass door room</li>  
-  <li id="washroom">&nbsp;⬌&nbsp;washroom</li>
-  <li id="osmocafe">⬇ osmo cafe</li>    
-        
+      <p>No Events Today</p>
 </ul>
 </div>
 
-<div id="qrcode">
-<img src="images/qr-code.svg"/>
-</div>>
+
+<div id="allrooms">
+<ul>
+<li class="alloffices">all offices</li>
+<li class="bigroom">big room</li>
+<li class="glassdoorroom">glass door room</li>
+</ul>
+<img src="images/l-arrow.svg"/>
+</div>
+
 <div id="communitybuilt">
 Community built. Improve me: http://github.com/maison-notman-house
 </div>
