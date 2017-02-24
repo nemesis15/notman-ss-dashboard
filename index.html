@@ -347,14 +347,13 @@
                    if (day.day === 'Today') {
                        items = day.items;
                        for (i=0; i < items.length; i++) {                           
-                           html += renderEvent(items[i]);                       
+                           html += renderEvent(items[i]);  
+                           foundEvents = true;                     
                        }
                    }
                });
            }
-           
-           foundEvents = false
-           
+                      
            if (!foundEvents) {
               html = '<p class="noevents">No Events today</p>';
            }
