@@ -34,7 +34,7 @@
        }
        
        .events {
-            width: 1600px;
+            width: 1700px;
             margin: 0 auto;     
        }
        
@@ -62,10 +62,20 @@
 			width: 300px;
 			text-align: center;
 			text-transform: uppercase;
-			
+			overflow: hidden;
 			
        }
        
+       .events li.floor3 .roomlabel{
+           color: white;     
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009688+0,da10ed+100 */
+			background: #009688; /* Old browsers */
+			background: -moz-linear-gradient(-45deg, #009688 0%, #da10ed 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(-45deg, #009688 0%,#da10ed 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(135deg, #009688 0%,#da10ed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009688', endColorstr='#da10ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */                  
+       }
+              
        .events li.bigroom .roomlabel{
            background: purple;      
            color: white;            
@@ -83,7 +93,7 @@
                      
        .events li .details {
             display: inline-block;  
-            width: 1200px;
+            width: 1300px;
             text-overflow: ellipsis;
                        
        }
@@ -197,200 +207,7 @@
           integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
           crossorigin="anonymous"></script>
           
-   <script type="text/javascript">
-       var languages = ['en', 'fr'];
-       var langIdx = 0;
-       
-       
-       var roomToKey = {
-          'glass door room': 'glassdoorroom',
-          'glass door': 'glassdoor',
-          'glassdoor': 'glassdoor',
-          'bigroom': 'bigroom',
-          'big room': 'bigroom',
-          'osmocafe': 'osmocafe',                
-          'osmo cafe': 'osmocafe',
-          'cafe': 'osmocafe',
-          'café': 'osmocafe'                                    
-       };
-       
-       var strings = {
-           en: {
-              "room-alloffices": 'all offices',
-              "room-bigroom": 'big room',
-              "room-glassdoorroom": 'glass door',
-              "room-washroom": 'washrooms', 
-              "room-osmocafe": 'osmo café', 
-              "events-heading": "Events on Today",
-              
-              "room-alloffices-long": 'all offices',
-              "room-bigroom-long": 'big room',
-              "room-glassdoorroom-long": 'glass door room',
-              "room-washroom-long": 'washrooms', 
-              "room-osmocafe-long": 'osmo café', 
-                            
-              "directions-bigroom": "3rd floor, go up stairs through door way to the right.",
-              "directions-glassdoorroom": "3rd floor, go up stairs through door way to the right.",
-              "directions-osmocafe": "This floor, behind you.",
-              
-              "noevents": "No events today"                                 
-           },
-           fr: {
-              "room-alloffices": 'bureaux',
-              "room-bigroom": 'grande salle',
-              "room-glassdoorroom": 'porte vitré',
-              "room-washroom": 'toilettes', 
-              "room-osmocafe": 'café osmo',      
-
-
-              "room-alloffices-long": 'bureaux',
-              "room-bigroom-long": 'la grande salle',
-              "room-glassdoorroom-long": 'la salle à la porte vitré',
-              "room-washroom-long": 'toilettes', 
-              "room-osmocafe-long": 'café osmo',  
-              
-              "events-heading": 'Evénements aujourd\'hui',
-              
-              "directions-bigroom": "Au 3ieme étage, par la porte à droite.",
-              "directions-glassdoorroom": "Au 3ieme étage, par la porte à droite.",
-              "directions-osmocafe": "Derrière vous, à cet étage",
-              
-              "noevents": "Aucun événements aujourd\'hui"                                                    
-           }           
-       }
-       
-       function getText(key) {
-           var lang = languages[langIdx];
-           
-           return strings[lang][key];
-       }
-       
-       function updateDate () {           
-           $('.date').html(moment().format('DD MMMM YYYY'));
-       }
-       
-       function updateTime () {
-           $('.time').html(moment().format('HH:mm'));
-       }
-       
-       
-       function switchLocale() {
-           langIdx++;
-           if (langIdx >= languages.length) {
-               langIdx = 0;
-           }
-           moment.locale(languages[langIdx]);
-           
-           var lang = languages[langIdx];
-           
-           updateDate();
-           
-           $('.alloffices .roomlabel').html(getText('room-alloffices'));
-           $('.bigroom .roomlabel').html(getText('room-bigroom'));
-           $('.glassdoorroom .roomlabel').html(getText('room-glassdoorroom'));
-           $('.toilets .roomlabel').html(getText('room-toilets'));
-           $('.osmocafe .roomlabel').html(getText('room-osmocafe'));
-           
-           $('.events h1').html(strings[lang]['events-heading']);
-           
-           $('.alloffices .roomdirections').html(getText('directions-alloffices'));
-           $('.bigroom .roomdirections').html(getText('directions-bigroom'));
-           $('.glassdoorroom .roomdirections').html(getText('directions-glassdoorroom'));
-           $('.toilets .roomdirections').html(getText('directions-toilets'));
-           $('.osmocafe .roomdirections').html(getText('directions-osmocafe'));
-
-           $('#allrooms .alloffices').html(getText('room-alloffices-long')); 
-           $('#allrooms .bigroom').html(getText('room-bigroom-long'));                      
-           $('#allrooms .glassdoorroom').html(getText('room-glassdoorroom-long'));                                 
-           
-           $('.noevents').html(getText('noevents')); 
-       }
-       
-       
-       function toISODate(date) {
-           return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-       }
-       
-       function normalizeRoomName(room) {
-           
-       }
-       
-       function renderEvent(event) {
-           var roomClass = '';
-           var roomName  = event.room ;
-           var roomdirections = '';
-           
-           var roomRef = event.room;
-           if (roomToKey[roomRef]) {
-              roomRef = roomToKey[roomRef];
-           }           
-           
-           var html = '<li class="' + roomRef + '">';
-           html += '<div class="roomlabel"> ' + getText('room-' + roomRef) + '</div>';
-           html += '<div class="details">';
-           html += '<span class="eventtime">' + event.start + '</span><span class="eventtitle">' + event.title + '</span>';
-           html += '<span class="roomdirections">' + getText('directions-' + roomRef) + '</span>';       
-           html += '</li>';
-           return html;
-       }
-       
-       function renderEvents(events) {
-           //var isoDate = toISODate(new Date());
-           $('.events ul').html('');
-           
-           var html = '';
-           var foundEvents = false;
-           if (events) {               
-               events.forEach(function (day) {
-                   var i;
-                   var items;
-                   if (day.day === 'Today') {
-                       items = day.items;
-                       for (i=0; i < items.length; i++) {                           
-                           html += renderEvent(items[i]);  
-                           foundEvents = true;                     
-                       }
-                   }
-               });
-           }
-                      
-           if (!foundEvents) {
-              html = '<p class="noevents">No Events today</p>';
-           }
-           
-           $('.events ul').html(html);
-           
-           
-           if (!foundEvents) {
-           
-           }
-       }
-       
-       function updateEvents() {
-           fetch('https://notman.herokuapp.com/api/events?24hour=1').then(function (response) {
-			  var contentType = response.headers.get("content-type");
-			  if(contentType && contentType.indexOf("application/json") !== -1) {
-				return response.json().then(function(json) {
-				  renderEvents(json);
-				});
-			  } else {
-				console.log("Oops, we haven't got JSON!");
-			  }
-           });
-       
-       }
-       
-       $(document).ready(function () {
-           updateEvents();
-           
-           setInterval(updateTime, 1000);
-           setInterval(updateDate, 1000);
-           setInterval(switchLocale, 5000);
-           setInterval(updateEvents, 60000);
-       });
-   
-       
-   </script>
+   <script type="text/javascript" src="js/main.js"></script>
    
 </head>
 
