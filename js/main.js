@@ -259,5 +259,6 @@ $(document).ready(function () {
    setInterval(updateTime, 1000);
    setInterval(updateDate, 1000);
    setInterval(switchLocale, 5000);
-   setInterval(updateEvents, 60000);
+   // every 30 minutes
+   setInterval(updateEvents, 60000 * 30);
 });
