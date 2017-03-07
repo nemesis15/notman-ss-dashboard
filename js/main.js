@@ -9,7 +9,7 @@ var days = {
 var dayMode = 'Today';
 
 var roomToKey = {
-    'glass door room': 'glassdoorroom',
+    'glass door room': 'glassdoor',
     'glass door': 'glassdoor',
     'glassdoor': 'glassdoor',
     'bigroom': 'bigroom',
@@ -32,7 +32,7 @@ var strings = {
     en: {
         "room-alloffices": 'all offices',
         "room-bigroom": 'big room',
-        "room-glassdoorroom": 'glass door',
+        "room-glassdoor": 'glass door',
         "room-washroom": 'washrooms',
         "room-osmocafe": 'osmo café',
         "room-floor3": '3rd floor',
@@ -49,7 +49,7 @@ var strings = {
         "office": 'office',
 
         "directions-bigroom": "3rd floor, go up stairs through door way to the right.",
-        "directions-glassdoorroom": "3rd floor, go up stairs through door way to the right.",
+        "directions-glassdoor": "3rd floor, go up stairs through door way to the right.",
         "directions-osmocafe": "This floor, behind you.",
         "directions-floor1": "1st floor, go up stairs through door way to the right.",
         "directions-floor2": "2nd floor, go up stairs through door way to the right.",
@@ -63,7 +63,7 @@ var strings = {
     fr: {
         "room-alloffices": 'bureaux',
         "room-bigroom": 'grande salle',
-        "room-glassdoorroom": 'porte vitré',
+        "room-glassdoor": 'porte vitré',
         "room-washroom": 'toilettes',
         "room-osmocafe": 'café osmo',
         "room-floor3": '3ieme étage',
@@ -78,7 +78,7 @@ var strings = {
         "events-heading-tomorrow": 'Evénements demain',
 
         "directions-bigroom": "Au 3ieme étage, par la porte à droite.",
-        "directions-glassdoorroom": "Au 3ieme étage, par la porte à droite.",
+        "directions-glassdoor": "Au 3ieme étage, par la porte à droite.",
         "directions-osmocafe": "Derrière vous, à cet étage",
         "directions-floor3": "Au 3ieme étage, par la porte à droite.",
 
