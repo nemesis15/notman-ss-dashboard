@@ -18,7 +18,8 @@ var roomToKey = {
     'osmo cafe': 'osmocafe',
     'cafe': 'osmocafe',
     'café	': 'osmocafe',
-    '3rd floor': 'floor3'
+    '3rd floor': 'floor3',
+    'bdc': 'bdc'
 };
 
 var floorFromRoom = {
@@ -36,6 +37,7 @@ var strings = {
         "room-washroom": 'washrooms',
         "room-osmocafe": 'osmo café',
         "room-floor3": '3rd floor',
+        "room-bdc": 'BDC',
 
         "events-heading-today": "Events on Today",
         "events-heading-tomorrow": "Events on Tomorrow",
@@ -56,6 +58,7 @@ var strings = {
         "directions-floor3": "3rd floor, go up stairs through door way to the right.",
         "directions-fh-floor1": 'Front house, 1st floor, go up stairs through door way to the right.',
         "directions-fh-floor2": 'Front house, 2nd floor, go up stairs through door way to the right.',
+        "directions-bdc": 'Front house, 1st floor, go up stairs through door way to the right.',
 
         "noevents-today": "No events today",
         "noevents-tomorrow": "No events tomorrow"
@@ -67,6 +70,7 @@ var strings = {
         "room-washroom": 'toilettes',
         "room-osmocafe": 'café osmo',
         "room-floor3": '3ieme étage',
+        "room-bdc": 'BDC',
 
         "room-alloffices-long": 'bureaux',
         "room-bigroom-long": 'la grande salle',
@@ -86,6 +90,7 @@ var strings = {
         "directions-floor2": "Au 2ieme étage, par la porte à droite.",
         "directions-fh-floor1": '\'Front House\', Au 1iere étage, par la porte à droite.',
         "directions-fh-floor2": '\'Front House\', Au 2ieme étage, par la porte à droite.',
+        "directions-bdc": '\'Front House\', Au 1iere étage, par la porte à droite.',
         "room": 'salle',
         "office": 'bureau',
         "noevents-today": "Aucun événements aujourd\'hui",
