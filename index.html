@@ -1,28 +1,60 @@
 <html>
+
 <head>
+   <title>Location:</title>
 
-<style type="text/css">
-  body {
-     background: black;
-     vertical-align: middle;
-     display: relative;
-     text-align: center;
-     overflow: hidden;
-  }
-  
-  video {
-     margin: 0 auto;
-     vertical-align: middle;
-     border: none;
-     background-color: black;
-     width: 1920px;
-     height: 1080px;
-  }
+   <!--
+   https://fonts.google.com/specimen/Poiret+One?selection.family=News+Cycle|Poiret+One
+   -->
 
-  
-</style>
+   <link href="https://fonts.googleapis.com/css?family=News+Cycle|Open+Sans|Poiret+One|Alegreya+Sans:800|Roboto:700" rel="stylesheet">
+
+   <meta http-equiv="Pragma" content="no-cache" />
+   <meta charset="UTF-8" />
+
+   <link rel="stylesheet" href="styles/style.css">
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+          integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+          crossorigin="anonymous"></script>
+
+   <script type="text/javascript" src="js/main.js"></script>
+
 </head>
+
 <body>
-<video src="videos/vernisage.mp4" autoplay loop/>
+
+<header>
+<img class="notmanlogo" src="images/Logo_Maison_Notman_House.svg"/></div>
+</header>
+
+<div class="date" >dd MMMMM YYYY</div>
+<div class="time" >HH:mm</div>
+
+<div class="gradient"></div>
+<div class="events">
+<h1>Events on Now</h1>
+
+
+<ul>
+      <p>No Events Today</p>
+</ul>
+</div>
+
+
+<div id="allrooms">
+<ul>
+<li class="alloffices">all offices</li>
+<li class="bigroom">big room</li>
+<li class="glassdoorroom">glass door room</li>
+</ul>
+<img src="images/l-arrow.svg"/>
+</div>
+
+<div id="communitybuilt">
+Community built. Improve me: http://github.com/maison-notman-house
+</div>
+
 </body>
 </html>
