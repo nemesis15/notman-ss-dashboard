@@ -80,6 +80,21 @@ header .notmanlogo {
     color: white;
 }
 
+.events li.cisco .roomlabel {
+    background: #007fab;
+    color: white;
+}
+
+.events li.terrace .roomlabel {
+    background: green;
+    color: white;
+}
+
+.events li.videotron .roomlabel {
+    background: #feda52;
+    color: white;
+}
+
 .events li .details {
     display: inline-block;
     width: 1300px;

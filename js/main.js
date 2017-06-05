@@ -8,6 +8,9 @@ var days = {
 
 var dayMode = 'Today';
 
+// A bunch of mapping to deal with inconsistencies in the
+// way they are entered into the calendar. Should this be
+// moved to the API server?
 var roomToKey = {
     'glass door room': 'glassdoor',
     'glass door': 'glassdoor',
@@ -19,7 +22,10 @@ var roomToKey = {
     'cafe': 'osmocafe',
     'café	': 'osmocafe',
     '3rd floor': 'floor3',
-    'bdc': 'bdc'
+    'bdc': 'bdc',
+    'terrace': 'terrace',
+    'cisco': 'cisco',
+    'videotron': 'videotron'
 };
 
 var floorFromRoom = {
@@ -38,6 +44,9 @@ var strings = {
         "room-osmocafe": 'osmo café',
         "room-floor3": '3rd floor',
         "room-bdc": 'BDC',
+        "room-terrace": 'terrace',
+        "room-cisco": 'cisco room',
+        "room-videotron": 'videotron room',
 
         "events-heading-today": "Events on Today",
         "events-heading-tomorrow": "Events on Tomorrow",
@@ -59,6 +68,9 @@ var strings = {
         "directions-fh-floor1": 'Front house, 1st floor, go up stairs through door way to the right.',
         "directions-fh-floor2": 'Front house, 2nd floor, go up stairs through door way to the right.',
         "directions-bdc": 'Front house, 1st floor, go up stairs through door way to the right.',
+        "directions-terrace": 'Outdoor space to left side of the café',
+        "directions-cisco": 'To your left',
+        "directions-videotron": 'To your left',
 
         "noevents-today": "No events today",
         "noevents-tomorrow": "No events tomorrow"
@@ -71,6 +83,9 @@ var strings = {
         "room-osmocafe": 'café osmo',
         "room-floor3": '3ieme étage',
         "room-bdc": 'BDC',
+        "room-terrace": 'terrace',
+        "room-cisco": 'salle cisco',
+        "room-videotron": 'salle videotron',
 
         "room-alloffices-long": 'bureaux',
         "room-bigroom-long": 'la grande salle',
@@ -91,6 +106,10 @@ var strings = {
         "directions-fh-floor1": '\'Front House\', Au 1iere étage, par la porte à droite.',
         "directions-fh-floor2": '\'Front House\', Au 2ieme étage, par la porte à droite.',
         "directions-bdc": '\'Front House\', Au 1iere étage, par la porte à droite.',
+        "directions-terrace": 'Espace exterieur, à la gauche du café',
+        "directions-cisco": 'A vôtre gauche',
+        "directions-videotron": 'A vôtre gauche',
+
         "room": 'salle',
         "office": 'bureau',
         "noevents-today": "Aucun événements aujourd\'hui",
