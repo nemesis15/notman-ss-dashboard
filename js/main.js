@@ -2,15 +2,15 @@ var languages = ['en', 'fr'];
 var langIdx = 0;
 
 Array.prototype.rotatel = function() {
-	var t = this.shift();
-	this.push(t);
-	return t;
+    var t = this.shift();
+    this.push(t);
+    return t;
 }
 
 Array.prototype.rotater = function() {
-	var t = this.pop();
-	this.unshift(t);
-	return t;
+    var t = this.pop();
+    this.unshift(t);
+    return t;
 }
 
 var days = {
@@ -308,21 +308,21 @@ function updateEvents() {
 }
 
 function cycleEvents() {
-	var elEvents,pEvents;
+    var elEvents,pEvents;
  
- 	elEvents = $('.events ul li').toArray();
+    elEvents = $('.events ul li').toArray();
  
-	if(elEvents.length > 3) {
-		pEvents= elEvents[0].parentElement;
+    if(elEvents.length > 3) {
+        pEvents= elEvents[0].parentElement;
  
-		elEvents.rotater();
+        elEvents.rotater();
  
-		pEvents.innerHTML= '';
+        pEvents.innerHTML= '';
  
-  		for (i = 0; i < elEvents.length; i++) {
-			pEvents.appendChild(elEvents[i]);
-		}
-	}  
+        for (i = 0; i < elEvents.length; i++) {
+            pEvents.appendChild(elEvents[i]);
+        }
+    }  
 } 
 
 $(document).ready(function() {
