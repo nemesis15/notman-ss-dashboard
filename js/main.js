@@ -1,6 +1,17 @@
 var languages = ['en', 'fr'];
 var langIdx = 0;
 
+Array.prototype.rotatel = function() {
+   var t = this.shift();
+   this.push(t);
+   return t;
+}
+Array.prototype.rotater = function() {
+   var t = this.pop();
+   this.unshift(t);
+   return t;
+}
+
 var days = {
     'Today': 'today',
     'Tomorrow': 'tomorrow'
@@ -295,6 +306,24 @@ function updateEvents() {
 
 }
 
+function cycleEvents() {
+ var elEvents,pEvents;
+ 
+ elEvents = $('.events ul li').toArray();
+ 
+ if(elEvents.length > 3) {
+  	pEvents= elEvents[0].parentElement;
+ 
+  	elEvents.rotater();
+ 
+  	pEvents.innerHTML= '';
+ 
+  	for (i = 0; i < elEvents.length; i++)
+      	pEvents.appendChild(elEvents[i]);
+  }
+  
+} 
+
 $(document).ready(function() {
     updateEvents();
     updateDayMode();
@@ -302,6 +331,7 @@ $(document).ready(function() {
     setInterval(updateTime, 1000);
     setInterval(updateDate, 1000);
     setInterval(switchLocale, 5000);
+    setInterval(cycleEvents, 7000);
     // every 30 minutes
     setInterval(updateEvents, 60000 * 30);
 });
